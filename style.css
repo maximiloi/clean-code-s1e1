@@ -152,21 +152,21 @@ button {
 }
 
 /* Completed */
-.task__list#completed-tasks .task__name {
+.task__list.task__completed .task__name {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-.editMode .task__input {
+._edit .task__input {
   display: none;
 }
 
-.editMode .task__input {
+._edit .task__input {
   display: inline-block;
   width: 224px;
 }
 
-.editMode .task__name {
+._edit .task__name {
   display: none;
 }
