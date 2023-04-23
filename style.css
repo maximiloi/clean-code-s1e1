@@ -1,10 +1,37 @@
+/* Reset style */
+ul {
+  margin: 0;
+  padding: 0px;
+}
+
+ul > * {
+  vertical-align: middle;
+}
+
+li,
+h3 {
+  list-style: none;
+}
+
+input,
+button {
+  outline: none;
+}
+
 /* Basic Style */
-body {
+.app {
   background-color: #f8f8f8;
   color: #333;
   font-family: Lato, sans-serif;
 }
 
+.main {
+  display: block;
+  width: 500px;
+  margin: 0 auto 0;
+}
+
+/* Header Style */
 .header {
   width: 500px;
   margin: 0 auto;
@@ -28,53 +55,11 @@ body {
 
 }
 
-.main {
-  display: block;
-  width: 500px;
-  margin: 0 auto 0;
-}
-
-.task__input,
-.task {
-  width: 56%;
-  display: inline-block;
-  flex-grow: 1;
-}
-
+/* All Task Style */
 .task__wrapper {
   display: flex;
 }
 
-ul {
-  margin: 0;
-  padding: 0px;
-}
-
-li,
-h3 {
-  list-style: none;
-}
-
-input,
-button {
-  outline: none;
-}
-
-.task__button {
-  background: none;
-  border: 0px;
-  color: #888;
-  font-size: 15px;
-  width: 60px;
-  font-family: Lato, sans-serif;
-  cursor: pointer;
-}
-
-.task__button:hover {
-  color: #3a3a3a;
-}
-
-/* Heading */
 .task__title {
   color: #333;
   font-weight: 700;
@@ -102,28 +87,46 @@ button {
   color: #333;
 }
 
+.task__name,
+.task__input {
+  width: 56%;
+  display: inline-block;
+  flex-grow: 1;
+}
+
+.task__button {
+  background: none;
+  border: 0px;
+  color: #888;
+  font-size: 15px;
+  width: 60px;
+  font-family: Lato, sans-serif;
+  cursor: pointer;
+}
+
+.task__button:hover {
+  color: #3a3a3a;
+}
+
 /* New Task */
-.task__title {
+.task__title--new {
   display: block;
   margin: 0 0 20px;
 }
 
-.task__input--new {
+.task__input.task__input--new {
+  display: block;
   width: 318px;
 }
 
 /* Task list */
-.task__list {
+.task__item {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.task__list > * {
-  vertical-align: middle;
 }
 
 .task__checkbox {
@@ -152,21 +155,21 @@ button {
 }
 
 /* Completed */
-.task__list.task__completed .task__name {
+.task__list.tasks__list--completed .task__name {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-._edit .task__input {
+.task__input {
   display: none;
 }
 
-._edit .task__input {
+.task__edit .task__input {
   display: inline-block;
   width: 224px;
 }
 
-._edit .task__name {
+.task__edit .task__name {
   display: none;
 }

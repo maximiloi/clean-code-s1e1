@@ -7,7 +7,7 @@
     <title>Todo App</title>
   </head>
 
-  <body>
+  <body class="app">
     <header class="header">
       <img class="header__img" src="./eisenhower-matrix.jpg" alt="matrix eisenhower">
       <a class="header__link" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
@@ -15,7 +15,7 @@
 
     <main class="main">
       <section class="task">
-        <h3 class="task__title">Add Item</h3>
+        <h3 class="task__title  task__title--new">Add Item</h3>
         <div class="task__wrapper">
           <input class="task__input  task__input--new" type="text">
           <button class="task__button">Add</button>
@@ -23,7 +23,7 @@
       </section>
       <section class="task">
         <h3 class="task__title">Todo</h3>
-        <ul class="task__list">
+        <ul class="task__list  tasks__list--incomplete">
           <li class="task__item">
             <input class="task__checkbox" type="checkbox">
             <label class="task__name">Pay Bills</label>
@@ -33,8 +33,8 @@
               <img class="task__icon" src="./remove.svg" alt="remove icon">
             </button>
           </li>
-          <li class="task__item">
-            <input class="task__checkbox" type="task__checkbox">
+          <li class="task__item   task__edit">
+            <input class="task__checkbox" type="checkbox">
             <label class="task__name">Go Shopping</label>
             <input class="task__input" type="text" value="Go Shopping">
             <button class="task__button  task__button--edit">Save</button>
@@ -46,11 +46,11 @@
       </section>
       <section class="task">
         <h3 class="task__title">Completed</h3>
-        <ul class="task__list">
-          <li class="task__item  _edit">
+        <ul class="task__list  tasks__list--completed">
+          <li class="task__item">
             <input class="task__checkbox" type="checkbox" checked>
             <label class="task__name">See the Doctor</label>
-            <input class="task__input" type="text" class="task">
+            <input class="task__input" type="text">
             <button class="task__button  task__button--edit">Edit</button>
             <button class="task__button  task__button--delete">
               <img class="task__icon" src="./remove.svg" alt="remove icon">
