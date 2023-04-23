@@ -105,7 +105,9 @@ button {
 
 /* New Task */
 .task__title--new {
+  display: block;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 
 .task__input.task__input--new {
