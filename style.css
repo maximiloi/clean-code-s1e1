@@ -13,7 +13,6 @@ h3 {
   list-style: none;
 }
 
-input,
 button {
   outline: none;
 }
@@ -26,16 +25,14 @@ button {
 }
 
 .main {
-  display: block;
   width: 500px;
-  margin: 0 auto 0;
+  margin: 0 auto;
 }
 
 /* Header Style */
 .header {
   width: 500px;
   margin: 0 auto;
-  display: block;
   text-align: right;
 }
 
@@ -44,7 +41,7 @@ button {
 }
 
 .header__link {
-  font-family: fantasy, cursive;
+  font-family: fantasy;
 }
 
 @media (max-width:768px) {
@@ -61,7 +58,6 @@ button {
 }
 
 .task__title {
-  color: #333;
   font-weight: 700;
   font-size: 15px;
   border-bottom: 2px solid #333;
@@ -90,12 +86,11 @@ button {
 .task__name,
 .task__input {
   width: 56%;
-  display: inline-block;
   flex-grow: 1;
 }
 
 .task__button {
-  background: none;
+  background: transparent;
   border: 0px;
   color: #888;
   font-size: 15px;
@@ -110,8 +105,7 @@ button {
 
 /* New Task */
 .task__title--new {
-  display: block;
-  margin: 0 0 20px;
+  margin-bottom: 20px;
 }
 
 .task__input.task__input--new {
@@ -135,7 +129,6 @@ button {
 
 .task__name {
   padding-left: 10px;
-  box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
@@ -146,12 +139,12 @@ button {
 
 .task__icon {
   height: 2em;
-  transform: rotateZ(45deg);
+  transform: rotate(45deg);
   transition: transform 200ms ease-in;
 }
 
 .task__icon:hover {
-  transform: rotateZ(0);
+  transform: rotate(0);
 }
 
 /* Completed */
@@ -166,7 +159,7 @@ button {
 }
 
 .task__edit .task__input {
-  display: inline-block;
+  display: block;
   width: 224px;
 }
 
